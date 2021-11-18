@@ -7,3 +7,5 @@ npm install -g cgreat
 
 cgreat clone https://github.com/XiaoFeiHe1993/cn-clone-cli.git
 ```
+
+感谢 github.com.cnpmjs.org 作者提供的服务

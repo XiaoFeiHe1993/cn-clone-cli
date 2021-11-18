@@ -12,7 +12,7 @@ program.on('--help', () => {})
 
 program
   .command('clone')
-  .description('通过jenkins发布测试环境项目')
+  .description('clone github仓库到本地')
   .action(() => {
     const argv = process.argv
     if (argv && argv[3]) {
