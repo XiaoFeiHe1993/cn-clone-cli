@@ -1,0 +1,33 @@
+{
+  "name": "cn",
+  "version": "1.0.0",
+  "description": "快速clone github仓库",
+  "main": "index.js",
+  "bin": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/XiaoFeiHe1993/cn-clone-cli.git"
+  },
+  "keywords": [
+    "git",
+    "clone",
+    "github",
+    "fast"
+  ],
+  "author": "xiaofeihe1993",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/XiaoFeiHe1993/cn-clone-cli/issues"
+  },
+  "homepage": "https://github.com/XiaoFeiHe1993/cn-clone-cli#readme",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "chalk": "^4.1.2",
+    "commander": "^8.3.0",
+    "inquirer": "^8.2.0",
+    "ora": "^6.0.1"
+  }
+}
