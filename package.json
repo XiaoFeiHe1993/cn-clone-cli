@@ -1,6 +1,6 @@
 {
-  "name": "cn",
-  "version": "1.0.0",
+  "name": "cgreat",
+  "version": "1.0.1",
   "description": "快速clone github仓库",
   "main": "index.js",
   "bin": "index.js",
