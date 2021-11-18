@@ -3,12 +3,15 @@ const axios = require('axios')
 const fs = require('fs')
 const path = require('path')
 const processChild = require('child_process');
+const ora = require('ora')
 
 const urlRegex = /http[s]{0,1}:\/\/([\w.]+\/?)\S*/
 
 const githubUrl = 'https://github.com'
 
 const proxyUrl = 'https://github.com.cnpmjs.org'
+
+const spinner = ora('loading...')
 
 // 校验仓库的有效性
 function checkHubEffective(url) {
@@ -44,7 +47,9 @@ function checkHubEffective(url) {
 
 // 开始clone仓库
 function startClone(replaceUrl, author, name) {
+  spinner.start()
   processChild.exec(`git clone ${replaceUrl}`, function (error, stdout, stderr) {
+    spinner.stop()
     if (error) {
       console.log(chalk.red(error));
       process.exit(0)
