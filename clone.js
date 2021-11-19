@@ -48,7 +48,7 @@ function checkHubEffective(url) {
 // 开始clone仓库
 function startClone(replaceUrl, author, name) {
   spinner.start()
-  processChild.exec(`git clone ${replaceUrl}`, function(error, stdout, stderr) {
+  processChild.exec(`git clone ${replaceUrl}`, (error, stdout, stderr) => {
     spinner.stop()
     if (error) {
       console.log(chalk.red(error))
@@ -61,7 +61,7 @@ function startClone(replaceUrl, author, name) {
 
 // 修改仓库.git/config地址
 function changeGitUrl(author, name) {
-  fs.readFile(path.join(process.cwd(), `${name}/.git/config`), 'utf8', function(err, data) {
+  fs.readFile(path.join(process.cwd(), `${name}/.git/config`), 'utf8', (err, data) => {
     if (err) throw err
     fs.writeFile(path.join(process.cwd(), `${name}/.git/config`), data.replace(proxyUrl, githubUrl), 'utf8',
       (err) => {
