@@ -8,4 +8,6 @@ npm install -g cgreat
 cgreat clone https://github.com/XiaoFeiHe1993/cn-clone-cli.git
 ```
 
+### 不支持pull、push等其他操作
+
 感谢 github.com.cnpmjs.org 作者提供的服务
