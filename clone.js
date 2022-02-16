@@ -9,7 +9,7 @@ const urlRegex = /http[s]{0,1}:\/\/([\w.]+\/?)\S*/
 
 const githubUrl = 'https://github.com'
 
-const proxyUrl = 'https://github.com.cnpmjs.org'
+const proxyUrl = 'https://gitclone.com'
 
 const spinner = ora('loading...')
 
@@ -23,7 +23,7 @@ function checkHubEffective(url) {
     console.log(chalk.red('请输入有效github仓库地址'))
     process.exit(0)
   }
-  const replaceUrl = url.replace(githubUrl, proxyUrl)
+  const replaceUrl = url.replace('https:/', proxyUrl)
   const urls = url.split('/')
   if (urls.length !== 5 || !urls[3] || !urls[4]) {
     console.log(chalk.red('请输入有效github仓库地址'))
@@ -63,7 +63,7 @@ function startClone(replaceUrl, author, name) {
 function changeGitUrl(author, name) {
   fs.readFile(path.join(process.cwd(), `${name}/.git/config`), 'utf8', (err, data) => {
     if (err) throw err
-    fs.writeFile(path.join(process.cwd(), `${name}/.git/config`), data.replace(proxyUrl, githubUrl), 'utf8',
+    fs.writeFile(path.join(process.cwd(), `${name}/.git/config`), data.replace(proxyUrl, 'https:/'), 'utf8',
       (err) => {
         if (err) throw err
         console.log(chalk.green('成功'))

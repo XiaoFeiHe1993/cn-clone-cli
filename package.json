@@ -1,6 +1,6 @@
 {
   "name": "cgreat",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "description": "快速clone github仓库",
   "main": "index.js",
   "bin": "index.js",
@@ -43,7 +43,7 @@
   },
   "husky": {
     "hooks": {
-      "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS"
+      "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS"
     }
   }
 }
